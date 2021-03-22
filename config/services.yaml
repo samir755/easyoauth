@@ -1,0 +1,20 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure:
+        bind:
+            $clientId: '%env(CLIENT_ID)%'
+            $clientSecret: '%env(CLIENT_SECRET)%'
+            $clientUri: '%env(CLIENT_URI)%'
+            $clientScope: '%env(CLIENT_SCOPE)%'
+
+    EasyOauth\:
+        resource: '../'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,EasyOauth.php}'
+
+    EasyOauth\src\Provider\ApiProvider:
+        arguments:
+            - '@http_client'
+            - '@doctrine.orm.entity_manager'

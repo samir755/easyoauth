@@ -1,0 +1,30 @@
+{
+  "name": "easyoauth/easyoauth",
+  "type": "library",
+  "description": "Easy implementation of OAuth2",
+  "keywords": ["oauth","api","oauth2","token"],
+  "homepage": "https://github.com/Samir755/easyoauth",
+  "license": "GNU3",
+  "authors": [
+    {
+      "name": "Samir_H",
+      "email": "",
+      "homepage": "",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.*",
+    "symfony/http-client": "5.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "EasyOauth\\": "lib/EasyOauth"
+    }
+  },
+  "extra": {
+    "symfony": {
+      "require": "5.*"
+    }
+  }
+}
