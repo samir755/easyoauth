@@ -1,5 +1,5 @@
 {
-  "name": "easyoauth/easyoauth",
+  "name": "samir755/easyoauth",
   "type": "library",
   "description": "Easy implementation of OAuth2",
   "keywords": ["oauth","api","oauth2","token"],
