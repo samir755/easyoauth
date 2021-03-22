@@ -1,10 +1,10 @@
 EasyOauth
 ============
 
-for Symfony 5.* 
-
 EasyOauth is a good starter pack for implement API with Oauth2 in your project.
-EasyOauth manage life of token needed for your api. 
+EasyOauth manage token needed for your api. 
+
+*Build on Symfony 5* 
 
 Installation
 ============
@@ -25,9 +25,9 @@ $ composer require easyoauth
 Applications that don't use Symfony Flex
 ----------------------------------------
 
-### Step 1: Define your http config in `config/packages/framework.yaml`
+### Step 1: Define your client in `config/packages/framework.yaml`
 
-An example with a famous job api:
+Here is an example for a famous French job api:
 
 ```yaml
     http_client:
@@ -40,13 +40,13 @@ An example with a famous job api:
                     Accept: application/json
 ```
 
-### Step 2: Configure your environment values (.env)
+### Step 2: Fill your environment values (.env)
 
 ```php
 ###> EasyOauth/EasyOauth ###
 CLIENT_ID=
 CLIENT_SECRET=
-CLIENT_URI=https://entreprise.pole-emploi.fr/connexion/oauth2/access_token?realm=%2Fpartenaire
+CLIENT_URI=      //Sample: https://entreprise.pole-emploi.fr/connexion/oauth2/access_token?realm=%2Fpartenaire
 CLIENT_SCOPE=""
 ###< EasyOauth/EasyOauth ###
 ```
@@ -68,7 +68,7 @@ EasyOauth\src\EasyOauthBundle::class => ['all' => true]
 
 ### Step 5: Connect to your API
 
-Implement by dependency injection 
+Retreive **oauthConnect()** service with dependency injection into your controller 
 
 ```php
     use EasyOauth\src\Provider\OauthProvider;
