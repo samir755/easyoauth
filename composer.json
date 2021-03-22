@@ -4,7 +4,7 @@
   "description": "Easy implementation of OAuth2",
   "keywords": ["oauth","api","oauth2","token"],
   "homepage": "https://github.com/Samir755/easyoauth",
-  "license": "GNU3",
+  "license": "GPL-3.0-only",
   "authors": [
     {
       "name": "Samir_H",
@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "php": ">=8.*",
+    "php": ">=7.4.16",
     "symfony/http-client": "5.*"
   },
   "autoload": {
